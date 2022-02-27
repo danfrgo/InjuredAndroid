@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="b3nac.injuredandroid">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".FlagEighteenActivity"
+            android:exported="true"
+            android:label="@string/title_activity_flag_eighteen"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="b3nac.injuredandroid.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".FlagSeventeenActivity"
+            android:label="@string/title_activity_flag_seventeen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CSPBypassActivity"
+            android:label="@string/title_activity_c_s_p_bypass"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="b3nac.com"
+                    android:pathPattern="/.*/"
+                    android:scheme="http" />
+                <data
+                    android:host="b3nac.com"
+                    android:pathPattern="/.*/"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AssemblyActivity"
+            android:label="@string/title_activity_assembly"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RCEActivity"
+            android:label="@string/title_activity_rce"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:label="filter_view_flag11">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "flag13://” -->
+                <data
+                    android:host="rce"
+                    android:scheme="flag13" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".ExportedProtectedIntent"
+            android:exported="true"
+            android:label="@string/title_activity_exported_protected_intent"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QXV0aA"
+            android:exported="true" />
+        <activity
+            android:name=".FlagTwelveProtectedActivity"
+            android:label="@string/title_activity_flag_twelve_protected"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DeepLinkActivity"
+            android:label="@string/title_activity_deep_link">
+            <intent-filter android:label="filter_view_flag11">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "flag11://” -->
+                <data android:scheme="flag11" />
+            </intent-filter>
+            <intent-filter android:label="filter_view_flag11">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://” -->
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FlagTenUnicodeActivity"
+            android:label="@string/title_activity_flag_ten_unicode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagOneLoginActivity"
+            android:label="@string/title_activity_flag_one_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagNineFirebaseActivity"
+            android:label="@string/title_activity_flag_nine_firebase"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagEightLoginActivity"
+            android:label="@string/title_activity_flag_eight_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagSevenSqliteActivity"
+            android:label="@string/title_activity_flag_seven_sqlite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagsOverview"
+            android:label="@string/title_activity_flags_overview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagSixLoginActivity"
+            android:label="@string/title_activity_flag_six_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".XSSTextActivity" />
+        <activity android:name=".DisplayPostXSS" />
+        <activity android:name=".FlagOneSuccess" />
+        <activity
+            android:name=".b25lActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FlagTwoActivity"
+            android:label="@string/title_activity_flag_two"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagThreeActivity"
+            android:label="@string/title_activity_flag_three"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FlagFourActivity"
+            android:label="@string/title_activity_flag_four"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".FlagFiveReceiver"
+            android:exported="true" />
+
+        <activity
+            android:name=".FlagFiveActivity"
+            android:label="@string/title_activity_flag_five"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestBroadcastReceiver"
+            android:exported="true"
+            android:label="@string/title_activity_test_broadcast_reciever"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ContactActivity" />
+    </application>
+</manifest>
